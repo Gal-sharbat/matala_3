@@ -69,7 +69,7 @@ def get_metadata(lines):
             creator_name = line[line.find("נוצרה על ידי")+15:-3]
             return {"chat_name": group_name, "creator": creator_name, "num_of_participants": "<"+str(current_id-1)+">"}
 
-dicts=read_file('gal.txt')
+dicts=read_file('chat_2.txt')
 
 file_json = json.dumps( dicts, ensure_ascii=False)
 with open(metadata['chat_name'],'w',encoding=('utf8')) as final:
